@@ -11,3 +11,10 @@ td:last-child {
     font-style: italic;
     color: grey;
 }
+#optionsTable th {
+    width: 15%;
+}
+
+#optionsTable th:last-child {
+    width: auto;
+}
