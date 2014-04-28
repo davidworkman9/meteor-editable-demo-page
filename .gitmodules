@@ -1,0 +1,3 @@
+[submodule "packages/meteor-editable"]
+	path = packages/meteor-editable
+	url = git@github.com:davidworkman9/meteor-editable.git
