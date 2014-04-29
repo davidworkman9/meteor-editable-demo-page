@@ -4,6 +4,7 @@ Session.setDefault('select2Tags', ['meteor', 'js']);
 Template.demo.helpers({
     'simpleTextOps': function () {
         return {
+            handle: 'span',
             type: 'text',
             value: Session.get('simpleText'),
             title: 'Enter username',
@@ -49,7 +50,7 @@ Template.demo.helpers({
             title: 'Select birthdate',
             showbuttons: false,
             display: function (val) {
-                return val instanceof Date ? moment(val).format('MMM DD YYYY') : val;
+                return val instanceof Date ? moment(val).format('MMM DD YYYY') : '';
             },
             onsubmit: function (val) {
                 Session.set('date', val);
@@ -63,7 +64,7 @@ Template.demo.helpers({
             title: 'Select event time',
             showbuttons: false,
             display: function (val) {
-                return val instanceof Date ? moment(val).format('MMM DD YYYY h:mm A') : val;
+                return val instanceof Date ? moment(val).format('MMM DD YYYY h:mm A') : '';
             },
             onsubmit: function (val) {
                 Session.set('datetime', val);
