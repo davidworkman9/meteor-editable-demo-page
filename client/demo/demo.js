@@ -1,5 +1,6 @@
 Session.setDefault('simpleText', 'superuser');
 Session.setDefault('sex', 0);
+Session.setDefault('select2Tags', ['meteor', 'js']);
 Template.demo.helpers({
     'simpleTextOps': function () {
         return {
