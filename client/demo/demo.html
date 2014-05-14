@@ -1,3 +1,7 @@
+<template name="custom_editable">
+    <span class="editable editable-click {{editableEmpty}}">{{displayVal}}</span>
+</template>
+
 <template name="demo">
     <div class="container" style="width: 90%;">
         <h1>Meteor-Editable Demo</h1>
@@ -5,7 +9,7 @@
         <table id="user" class="table table-bordered table-striped" style="clear: both">
             <tbody>
             <tr>
-                <td>Simple text field (async)</td>
+                <td>Simple text field (async, custom template)</td>
                 <td>{{> m_editable simpleTextOps }}</td>
             </tr>
             <tr>

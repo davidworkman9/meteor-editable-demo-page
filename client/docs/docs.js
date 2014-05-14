@@ -3,10 +3,17 @@ Template.docs.rendered = function () {
 };
 
 Template.docs.helpers({
-    example1: function () {
+    'example1': function () {
         return '{{> m_editable type="text" value="text" }}';
     },
-    example2: function () {
+    'customTemplateExample': function () {
+        return '<template name="customEditableTemplate">\n' +
+               '     <span class="editable editable-click {{editableEmpty}}">{{displayVal}}</span>\n' +
+               '</template>';
+    },
+    'customTemplateHelper1': function () { return 'editable editable-click {{editableEmpty}}'; },
+    'customTemplateHelper2': function () { return '{{displayVal}}'; },
+    'example2': function () {
         return "options: function () {\n" +
             "  return {\n" +
             "    type: 'textarea',\n" +
@@ -23,7 +30,7 @@ Template.docs.helpers({
             "}\n\n\n\n" +
             "{{> m_editable options}}";
     },
-    options: function () {
+    'options': function () {
         return {
             type: 'textarea',
             async: true,

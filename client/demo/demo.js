@@ -4,7 +4,7 @@ Session.setDefault('select2Tags', ['meteor', 'js']);
 Template.demo.helpers({
     'simpleTextOps': function () {
         return {
-            handle: 'span',
+            template: Template.custom_editable,
             type: 'text',
             value: Session.get('simpleText'),
             title: 'Enter username',

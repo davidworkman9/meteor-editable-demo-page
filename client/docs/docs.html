@@ -1,6 +1,6 @@
 <template name="docs">
     <div class="container" style="width: 90%;">
-        <h1>Getting Started</h1>
+        <h1>Getting Started v0.0.8</h1>
         <div class="col-xs-12">
             <h2>Install</h2>
             <div class="col-xs-12">
@@ -79,6 +79,12 @@
                         <td>Array</td>
                         <td>null</td>
                         <td>The source of the select. Only works not relevant for all datatypes. Only select and select2 at the moment. Array should be formatted like so: <pre class="prettyprint">[{value: 1, text: "text1"}, {value: 2, text: "text2"}]</pre></td>
+                    </tr>
+                    <tr>
+                        <td>Template (new in v0.0.8)</td>
+                        <td>Template</td>
+                        <td>null</td>
+                        <td>The template to be displayed for the editable handle. There are two handlebar helpers you need to include for things to function correctly. A class of <pre class="prettyprint">{{customTemplateHelper1}}</pre> and in inner text: <pre class="prettyprint">{{customTemplateHelper2}}</pre>(Would consider suggestions on how to improve this). Example: <pre class="prettyprint">{{customTemplateExample}}</pre></td>
                     </tr>
                     </tbody>
                 </table>
