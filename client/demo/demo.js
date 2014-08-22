@@ -41,7 +41,34 @@ Template.demo.helpers({
             onsubmit: function (val) {
                 Session.set('sex', val);
             }
-        }
+        };
+    },
+    'selectOptGroupOps': function () {
+        return {
+            type: 'select',
+            source: [{
+                    text: 'Alaskan/Hawaiian Time Zone',
+                    children: [
+                        { text: 'Alaska', value: 'AK'},
+                        { text: 'Hawaii', value: 'HI' }
+                    ]
+                }, {
+                    text: 'Pacific Time Zone',
+                    children: [
+                        { text: 'California', value: 'CA'},
+                        { text: 'Nevada', value: 'NV' },
+                        { text: 'Oregon', value: 'OR' },
+                        { text: 'Washington', value: 'WA' }
+                    ]
+                }
+            ],
+            value: Session.get('selectOpGroups'),
+            title: 'Select state',
+            showbuttons: false,
+            onsubmit: function (val) {
+                Session.set('selectOpGroups', val);
+            }
+        };
     },
     'dateOps': function () {
         return {
@@ -80,7 +107,7 @@ Template.demo.helpers({
             onsubmit: function (val) {
                 Session.set('textarea', val);
             }
-        }
+        };
     },
     'select2TagsOps': function () {
         return {
@@ -98,6 +125,33 @@ Template.demo.helpers({
                 Session.set('select2Tags', val);
             }
         }
+    },
+    'select2WithOpGroups': function () {
+        return {
+            type: 'select2',
+            source: [{
+                text: 'Alaskan/Hawaiian Time Zone',
+                children: [
+                    { text: 'Alaska', value: 'AK'},
+                    { text: 'Hawaii', value: 'HI' }
+                ]
+            }, {
+                text: 'Pacific Time Zone',
+                children: [
+                    { text: 'California', value: 'CA'},
+                    { text: 'Nevada', value: 'NV' },
+                    { text: 'Oregon', value: 'OR' },
+                    { text: 'Washington', value: 'WA' }
+                ]
+            }
+            ],
+            value: Session.get('select2OpGroups'),
+            title: 'Select state',
+            showbuttons: false,
+            onsubmit: function (val) {
+                Session.set('select2OpGroups', val);
+            }
+        };
     },
     'html5Inputs': function () { return ['Password', 'Number', 'Email', 'URL', 'tel', 'Range', 'Time']; },
     'inputOps': function () {

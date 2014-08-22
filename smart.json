@@ -1,6 +1,8 @@
 {
   "packages": {
-    "bootstrap-3": {},
+    "bootstrap-3": {
+        "version": "3.1.1-1"
+    },
     "moment": {},
     "bootstrap3-datepicker": {},
     "iron-router": {}
